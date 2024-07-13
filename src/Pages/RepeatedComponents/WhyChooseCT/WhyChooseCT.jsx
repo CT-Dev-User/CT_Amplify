@@ -72,7 +72,7 @@ const WhyChooseCTSlider = ({ category, subCategory }) => {
 
     const fetchSliderData = async () => {
         try {
-            const response = await axios.get(`http://localhost:8080/get-choose-ct-slider-data-byCategorySubCategory/${category}/${subCategory}`);
+            const response = await axios.get(`https://ct-backend-amplify.vercel.app/get-choose-ct-slider-data-byCategorySubCategory/${category}/${subCategory}`);
             setSliderData(response.data.data);
         } catch (error) {
             console.log(error);

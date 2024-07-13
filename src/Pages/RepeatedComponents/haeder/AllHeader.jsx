@@ -5,7 +5,7 @@ const AllHeader = ({ category, subCategory }) => {
 
     const fetchHeader = async () => {
         try {
-            const response = await axios.get(`http://localhost:8080/get-header-by-headerCategoryandSubCategory/${category}/${subCategory}`);
+            const response = await axios.get(`https://ct-backend-amplify.vercel.app/get-header-by-headerCategoryandSubCategory/${category}/${subCategory}`);
             setHeaderData(response.data.data);
         } catch (error) {
             console.log(error);

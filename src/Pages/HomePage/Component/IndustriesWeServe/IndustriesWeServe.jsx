@@ -10,7 +10,7 @@ const IndustriesWeServe = () => {
 
     const getHomeIndustriesData = async () => {
         try {
-            const response = await axios.get("http://localhost:8080/get-industries-data")
+            const response = await axios.get("https://ct-backend-amplify.vercel.app/get-industries-data")
             if (response.status === 200) {
                 setHomeIndustriesData(response.data.getData)
             }

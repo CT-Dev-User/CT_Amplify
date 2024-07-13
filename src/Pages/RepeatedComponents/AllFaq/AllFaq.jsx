@@ -4,7 +4,7 @@ const AllFaq = ({ category, subCategory }) => {
     const [homeFaqs, setHomeFaqs] = useState([]);
     const fetchHomeFaqs = async () => {
         try {
-            const response = await axios.get(`http://localhost:8080/get-faq-bycategorysubcategory/${category}/${subCategory}`);
+            const response = await axios.get(`https://ct-backend-amplify.vercel.app/get-faq-bycategorysubcategory/${category}/${subCategory}`);
             setHomeFaqs(response.data.data);
         } catch (error) {
             console.log(error);

@@ -9,7 +9,7 @@ const KeyFeature = () => {
   const [KeyFeatureData, setKeyFeatureData] = useState([]);
   const fetchKeyFeatureData = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/get-key-feature-data");
+      const response = await axios.get("https://ct-backend-amplify.vercel.app/get-key-feature-data");
       setKeyFeatureData(response.data.getdata);
     } catch (error) {
       console.log(error);

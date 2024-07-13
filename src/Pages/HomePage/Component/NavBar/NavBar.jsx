@@ -39,7 +39,7 @@ const NavBar = ({ hideNavbar, setHideNavbar, activeSubNav }) => {
 
   const fetchNavCategory = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/get-category");
+      const response = await axios.get("https://ct-backend-amplify.vercel.app/get-category");
       setNavigations(response.data.getData);
     } catch (error) {
       console.log(error);
@@ -56,7 +56,7 @@ const NavBar = ({ hideNavbar, setHideNavbar, activeSubNav }) => {
         setDropdownsData([]);
         setActiveItem("");
       } else {
-        const response = await axios.get(`http://localhost:8080/get-navigation-by-navCategory/${navcategory}`);
+        const response = await axios.get(`https://ct-backend-amplify.vercel.app/get-navigation-by-navCategory/${navcategory}`);
         if (response.data.message === "Category retrieved successfully") {
           setDropdownsData(response.data.data);
         } else {

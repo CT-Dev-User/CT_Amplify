@@ -8,7 +8,7 @@ const MeetOurClient = () => {
 
     const fetchClientReviewData = async () => {
         try {
-          const response = await axios.get("http://localhost:8080/get-client-review-data");
+          const response = await axios.get("https://ct-backend-amplify.vercel.app/get-client-review-data");
           setClientReviewsData(response.data.getData);
         } catch (error) {
           console.log(error);

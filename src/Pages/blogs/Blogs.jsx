@@ -15,7 +15,7 @@ const Blogs = () => {
 
     const fetchBlogDataById = async () => {
         try {
-            const response = await axios.get(`http://localhost:8080/get-blogs-data-by-id/${id}`);
+            const response = await axios.get(`https://ct-backend-amplify.vercel.app/get-blogs-data-by-id/${id}`);
             setBlogsData(response.data.data);
         } catch (error) {
             console.log(error);

@@ -9,7 +9,7 @@ const PartnerUpWithCity = () => {
 
     const fetchPartnerUpData = async () => {
         try {
-            const response = await axios.get("http://localhost:8080/get-partner-up-data");
+            const response = await axios.get("https://ct-backend-amplify.vercel.app/get-partner-up-data");
             if (response.status === 200) {
                 setPartnerUpData(response.data.getdata);
             }

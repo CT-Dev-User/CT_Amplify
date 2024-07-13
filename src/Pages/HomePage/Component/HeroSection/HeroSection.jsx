@@ -29,7 +29,7 @@ const HeroSection = () => {
 
     const fetchHomeHeroData = async () => {
         try {
-            const response = await axios.get("http://localhost:8080/get-heroslider-data");
+            const response = await axios.get("https://ct-backend-amplify.vercel.app/get-heroslider-data");
             setHeroData(response.data.getdata);
         } catch (error) {
             console.log(error);

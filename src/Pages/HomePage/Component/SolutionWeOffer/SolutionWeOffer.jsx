@@ -7,7 +7,7 @@ const SolutionWeOffer = () => {
 
     const getHomeSolutionDataFunc = async () => {
         try {
-            const response = await axios.get("http://localhost:8080/get-solution-we-offer-data")
+            const response = await axios.get("https://ct-backend-amplify.vercel.app/get-solution-we-offer-data")
             setGetSolutionData(response.data.getData)
 
         } catch (error) {

@@ -12,10 +12,10 @@ const ReliableTools = ({ category, subCategory }) => {
     const fetchReliableDataByCategory = async () => {
         try {
             if (category === "HomePage") {
-                const response = await axios.get("http://localhost:8080/get-reliable-tools-data")
+                const response = await axios.get("https://ct-backend-amplify.vercel.app/get-reliable-tools-data")
                 setReliableToolsData(response.data.data);
             } else {
-                const response = await axios.get(`http://localhost:8080/get-reliable-tools-data/${category}/${subCategory}`);
+                const response = await axios.get(`https://ct-backend-amplify.vercel.app/get-reliable-tools-data/${category}/${subCategory}`);
                 setReliableToolsData(response.data.data);
             }
         } catch (error) {

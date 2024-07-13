@@ -6,7 +6,7 @@ const CaseStudies = () => {
   
   const getCaseStudiesDataFunc = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/get-case-studies");
+      const response = await axios.get("https://ct-backend-amplify.vercel.app/get-case-studies");
       setCaseStudies(response.data.getData);
     }
     catch (error) {

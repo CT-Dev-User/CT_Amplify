@@ -31,7 +31,7 @@ const ServiceWeOffer = () => {
 
     const fetchHomeServiceData = async () => {
         try {
-            const response = await axios.get("http://localhost:8080/get-service-data");
+            const response = await axios.get("https://ct-backend-amplify.vercel.app/get-service-data");
             setHomeServiceData(response.data.getData);
         } catch (error) {
             console.log(error);
